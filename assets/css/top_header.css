@@ -1,0 +1,498 @@
+/* ======================================================
+   TOP HEADER – MENDIETA
+   ====================================================== */
+
+/* =========================
+   TOPBAR
+   ========================= */
+
+.topbar {
+  background: var(--m-primary);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 13px;
+}
+
+.topbar__inner {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+/* redes */
+.topbar__social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.topbar__social a {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.topbar__social a:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* contacto */
+.topbar__contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.topbar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.topbar__link i {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+/* Permite sticky dentro del hero */
+@media (max-width: 980px) {
+  .hero {
+    overflow: visible;
+  } /* solo en móvil */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: #fff;
+  border-bottom: 1px solid rgba(5, 61, 56, 0.08);
+  isolation: isolate;
+}
+
+.navPanel {
+  z-index: 100000;
+} /* el panel móvil encima del header */
+
+.header__inner {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: nowrap;
+}
+
+/* brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.brand__logo {
+  max-width: 190px;
+  height: auto;
+}
+
+/* =========================
+   NAV DESKTOP
+   ========================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
+}
+
+.nav a {
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(5, 61, 56, 0.9);
+  padding: 10px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(5, 61, 56, 0.06);
+}
+
+.nav a.is-active {
+  background: rgba(5, 61, 56, 0.1);
+  font-weight: 700;
+}
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* =========================
+   HAMBURGER
+   ========================= */
+
+.hamb {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(5, 61, 56, 0.15);
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hamb span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: rgba(5, 61, 56, 0.9);
+  border-radius: 10px;
+}
+
+/* =========================
+   MOBILE NAV PANEL
+   ========================= */
+
+.navPanel {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+}
+
+.navPanel__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 61, 56, 0.55);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.navPanel__sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(88vw, 360px);
+  height: 100%;
+  background: #ffffff;
+  border-left: 1px solid rgba(5, 61, 56, 0.12);
+  box-shadow: 0 20px 60px rgba(5, 61, 56, 0.25);
+  transform: translateX(105%);
+  transition: transform 0.25s ease;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* header */
+.navPanel__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(5, 61, 56, 0.1);
+}
+
+.navPanel__close {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(5, 61, 56, 0.12);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+/* links */
+.navPanel__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navPanel__nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgba(5, 61, 56, 0.95);
+  background: rgba(5, 61, 56, 0.05);
+  border: 1px solid rgba(5, 61, 56, 0.08);
+}
+
+.navPanel__nav a:hover {
+  background: rgba(5, 61, 56, 0.08);
+}
+
+/* acciones */
+.navPanel__actions {
+  margin-top: auto;
+  display: grid;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(5, 61, 56, 0.1);
+}
+
+/* abierto */
+.navPanel.is-open {
+  pointer-events: auto;
+}
+
+.navPanel.is-open .navPanel__backdrop {
+  opacity: 1;
+}
+
+.navPanel.is-open .navPanel__sheet {
+  transform: translateX(0);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* tablet */
+@media (max-width: 1100px) {
+  .nav {
+    display: none;
+  }
+
+  .header__actions {
+    display: none;
+  }
+
+  .hamb {
+    display: inline-flex;
+  }
+}
+
+/* =========================
+   MOBILE TOPBAR (SIN BUG)
+   ========================= */
+@media (max-width: 720px) {
+  .topbar {
+    font-size: 13px;
+  }
+
+  .topbar__inner {
+    min-height: 42px; /* ✅ se mantiene */
+    padding: 8px 0; /* ✅ compacto */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ✅ centrado */
+    gap: 10px;
+  }
+
+  /* ✅ Oculta redes en móvil (van al footer o menú) */
+  .topbar__social {
+    display: none;
+  }
+
+  /* ✅ Contacto en una sola línea */
+  .topbar__contact {
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: nowrap; /* ✅ evita que crezca */
+  }
+
+  /* ✅ Si quieres, oculta el correo en móviles chicos */
+  .topbar__link--email {
+    display: none;
+  }
+}
+/* Extra: en pantallas MUY pequeñas, que el correo no empuje */
+@media (max-width: 380px) {
+  .topbar__contact {
+    flex-direction: column; /* ✅ teléfono y correo uno debajo del otro */
+    gap: 6px;
+  }
+}
+
+:root {
+  --topbar-h: 42px;
+  --header-h: 74px;
+  --sticky-offset: calc(var(--topbar-h) + var(--header-h) + 14px);
+}
+
+/* Para que los anchors no queden debajo del sticky header */
+section[id] {
+  scroll-margin-top: var(--sticky-offset);
+}
+
+/* Si usas scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   FIX: Menú móvil empieza debajo del HEADER
+   ========================================= */
+
+/* Altura real del header (sin topbar) */
+:root {
+  --header-h: 74px;
+}
+
+/* En móvil/tablet (donde usas hamburguesa) */
+@media (max-width: 1100px) {
+  /* el overlay debe empezar debajo del header */
+  .navPanel {
+    top: var(--header-h);
+    height: calc(100vh - var(--header-h));
+    inset: auto 0 0 0; /* anula inset:0 */
+  }
+
+  .navPanel__backdrop {
+    top: 0;
+  }
+
+  /* la hoja (sheet) también debajo del header */
+  .navPanel__sheet {
+    top: 0;
+    height: 100%;
+    border-top-left-radius: 18px; /* opcional, se ve mejor */
+  }
+}
+
+/* ===== MENU: scroll dentro del panel (recomendado) ===== */
+@media (max-width: 1100px) {
+  .navPanel__sheet {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .navPanel {
+    pointer-events: none; /* deja pasar gestos */
+  }
+  .navPanel__sheet {
+    pointer-events: auto; /* pero el menú sí clickeable */
+  }
+}
+/* ===== FIX PC: logo no se corte + header con aire ===== */
+@media (min-width: 1101px) {
+  .header__inner {
+    min-height: 84px; /* antes 74px */
+    padding: 10px 0; /* aire arriba/abajo */
+    align-items: center;
+  }
+
+  .brand__logo {
+    display: block;
+    height: 44px; /* controla alto real */
+    width: auto;
+    max-width: 210px; /* opcional */
+    object-fit: contain;
+  }
+}
+
+/* =========================
+   FIX DEFINITIVO: Header SIEMPRE pegado (PC)
+   - Evita que "muera" el sticky por stacking/transform/overflow.
+   ========================= */
+
+:root {
+  --topbar-h: 42px;
+  --header-h: 74px;
+}
+
+/* Desktop: topbar + header fijos */
+@media (min-width: 1101px) {
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+  }
+
+  .header {
+    position: fixed;
+    top: var(--topbar-h);
+    left: 0;
+    right: 0;
+    z-index: 999999;
+  }
+
+  /* Empuja TODO el contenido para que no quede debajo */
+  body {
+    padding-top: calc(var(--topbar-h) + var(--header-h));
+  }
+
+  /* Ajusta anclas (#nosotros, etc.) para que no queden tapadas */
+  section[id] {
+    scroll-margin-top: calc(var(--topbar-h) + var(--header-h) + 14px);
+  }
+}
+
+/* =====================================
+   HEADER STICKY REAL (TOPBAR + HEADER)
+   ===================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: #fff;
+}
+
+/* topbar */
+.topbar {
+  background: var(--m-primary);
+  color: #fff;
+  font-size: 13px;
+}
+
+/* header */
+.header {
+  background: #fff;
+  border-bottom: 1px solid rgba(5, 61, 56, 0.08);
+}
+
+/* evita saltos */
+.site-header * {
+  transform: translateZ(0);
+}

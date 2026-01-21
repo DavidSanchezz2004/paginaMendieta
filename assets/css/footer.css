@@ -1,0 +1,292 @@
+/* =========================
+   FOOTER — Mendieta
+   ========================= */
+
+.footer {
+  background: #0c433d; /* verde oscuro similar al screenshot */
+  color: rgba(255, 255, 255, 0.9);
+  padding-top: 44px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr 0.9fr;
+  gap: 34px;
+  align-items: start;
+  padding-bottom: 34px;
+}
+
+/* Brand */
+.footer__brand {
+  max-width: 360px;
+}
+.footer__logo img {
+  width: 170px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+}
+
+.footer__tagline {
+  margin: 12px 0 14px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer__social a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
+}
+.footer__social a:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Columns */
+.footer__title {
+  margin: 0 0 12px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+  color: #fff;
+}
+
+.footer__title--mt {
+  margin-top: 18px;
+}
+
+.footer__text {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.85;
+  font-weight: 600;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.footer__item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 600;
+}
+
+.footer__icon {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex: 0 0 auto;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__list--links li a i {
+  margin-right: 8px;
+  opacity: 0.95;
+}
+
+/* Menu */
+.footer__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.footer__menu a {
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.96);
+  text-decoration: none;
+}
+.footer__menu a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom bar */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 14px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.footer__bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+}
+
+.footer__miniLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer__miniLinks a {
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer__miniLinks a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1100px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+  }
+  .footer__brand {
+    max-width: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer {
+    padding-top: 34px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer__title {
+    font-size: 20px;
+  }
+
+  .footer__menu a {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   FOOTER — MOBILE FIX (override)
+   ========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .footer__brand {
+    max-width: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .footer {
+    padding-top: 28px;
+  }
+
+  /* aire lateral (si .wrap no tiene padding) */
+  .footer .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer__grid {
+    gap: 18px;
+    padding-bottom: 20px;
+  }
+
+  /* logo más controlado */
+  .footer__logo img {
+    width: 140px;
+  }
+
+  .footer__title {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .footer__tagline,
+  .footer__text {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .footer__menu {
+    gap: 10px;
+  }
+
+  .footer__menu a {
+    font-size: 18px;
+  }
+
+  /* bottom centrado */
+  .footer__bottomInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .footer__miniLinks {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 420px) {
+  .footer__logo img {
+    width: 130px;
+  }
+
+  .footer__social a {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer__icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 9px;
+  }
+}

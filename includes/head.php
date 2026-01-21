@@ -12,12 +12,13 @@ $desc  = $desc  ?? 'Servicios contables en Lima para empresas y pymes.';
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="<?= $BASE ?>/assets/css/base.css" />
-<link rel="stylesheet" href="<?= $BASE ?>/assets/css/top_header.css" />
-<link rel="stylesheet" href="<?= $BASE ?>/assets/css/footer.css" />
-<link rel="stylesheet" href="<?= $BASE ?>/assets/css/funciones.css" />
-<link rel="stylesheet" href="<?= $BASE ?>/assets/css/portafolio.css" />
-<link rel="stylesheet" href="<?= $BASE ?>/assets/css/nosotros.css" />
+<link rel="stylesheet" href="/app/assets/css/base.css">
+<link rel="stylesheet" href="/app/assets/css/footer.css">
+<link rel="stylesheet" href="/app/assets/css/top_header.css">
+<link rel="stylesheet" href="/app/assets/css/funciones.css">
+<link rel="stylesheet" href="/app/assets/css/nosotros.css">
+<link rel="stylesheet" href="/app/assets/css/portafolio.css">
+
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />

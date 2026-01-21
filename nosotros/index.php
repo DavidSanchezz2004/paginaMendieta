@@ -361,6 +361,6 @@ $current = '/nosotros'; // para marcar activo en el header
 
 <?php include $ROOT . '/includes/footer.php'; ?>
 
-<script src="<?= $BASE ?>/assets/js/top_header.js"></script>
+<script src="/app/assets/js/top_header.js"></script>
 </body>
 </html>
